@@ -12,8 +12,7 @@ import org.openqa.selenium.WebDriver;
 public class loginStep extends BaseTest {
     public WebDriver driver;
 
-    public loginStep(WebDriver driver) {
-        this.driver = driver;
+    public loginStep() {
     }
     @Given("^I am on the login page \"([^\"]*)\" in \"([^\"]*)\"$")
     public void iAmOnTheLoginPageIn(String arg0, String arg1) throws Throwable {
@@ -38,7 +37,5 @@ public class loginStep extends BaseTest {
 
     @And("^I should see the \"([^\"]*)\" menu$")
     public void iShouldSeeTheMenu(String arg0) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-
     }
 }
