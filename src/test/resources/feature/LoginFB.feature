@@ -4,7 +4,7 @@ Feature: Login to Facebook
 
   Scenario: Successful login
     Given I am on the login page "chrome" in "https://www.facebook.com/"
-#    When I enter my username and password
-#    And I click the Login button
+    When I enter my username and password
+    And I click the Login button
 #    Then I should be taken to the Dashboard page
 #    And I should see the "Customers" menu
