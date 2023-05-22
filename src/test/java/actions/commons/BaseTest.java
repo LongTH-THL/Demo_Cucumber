@@ -1,5 +1,6 @@
 package actions.commons;
 
+import io.cucumber.java.After;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -8,6 +9,9 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 
 import java.util.concurrent.TimeUnit;
 
@@ -80,5 +84,9 @@ public class BaseTest extends BasePage{
             Reporter.getCurrentTestResult().setThrowable(e);
         }
         return pass;
+    }
+    @AfterTest
+    public void closeBrowser(){
+        driver.close();
     }
 }

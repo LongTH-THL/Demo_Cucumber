@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
         features = "src/test/resources/feature/",
         glue = "steps/login",
         plugin = {"pretty", "html:target/cucumber-html-report.html"}
+        ,tags = "@tag2"
 )
 
 public class RunCucumberTests  extends AbstractTestNGCucumberTests {
